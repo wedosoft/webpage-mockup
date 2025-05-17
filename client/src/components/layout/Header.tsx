@@ -48,12 +48,10 @@ const Header = () => {
   return (
     <header className={`sticky top-0 z-50 bg-white ${isScrolled ? "shadow-md" : ""} transition-shadow`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/">
-          <a className="flex items-center">
+        <Link href="/" className="flex items-center">
             <div className="text-primary font-bold text-2xl font-heading">
               <span className="text-secondary">WeDo</span>Desk
             </div>
-          </a>
         </Link>
         
         {/* Desktop Navigation */}
