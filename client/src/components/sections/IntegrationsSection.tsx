@@ -1,34 +1,34 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { 
-  SiSlack, 
-  SiGoogle, 
-  SiMicrosoft, 
-  SiSalesforce, 
-  SiJira, 
-  SiZapier,
-  SiZoom,
-  SiGithub,
-  SiStripe,
-  SiTwilio,
-  SiDropbox,
-  SiShopify
-} from "react-icons/si";
+  FaSlack,
+  FaGoogle,
+  FaMicrosoft, 
+  FaCodepen, 
+  FaJira, 
+  FaTasks,
+  FaVideo,
+  FaGithub,
+  FaCreditCard,
+  FaPhone,
+  FaDropbox,
+  FaShoppingBag
+} from "react-icons/fa";
 
 const IntegrationsSection = () => {
   const integrations = [
-    { icon: <SiSlack className="h-8 w-8" />, name: "Slack" },
-    { icon: <SiGoogle className="h-8 w-8" />, name: "Google" },
-    { icon: <SiMicrosoft className="h-8 w-8" />, name: "Microsoft" },
-    { icon: <SiSalesforce className="h-8 w-8" />, name: "Salesforce" },
-    { icon: <SiJira className="h-8 w-8" />, name: "Jira" },
-    { icon: <SiZapier className="h-8 w-8" />, name: "Zapier" },
-    { icon: <SiZoom className="h-8 w-8" />, name: "Zoom" },
-    { icon: <SiGithub className="h-8 w-8" />, name: "GitHub" },
-    { icon: <SiStripe className="h-8 w-8" />, name: "Stripe" },
-    { icon: <SiTwilio className="h-8 w-8" />, name: "Twilio" },
-    { icon: <SiDropbox className="h-8 w-8" />, name: "Dropbox" },
-    { icon: <SiShopify className="h-8 w-8" />, name: "Shopify" }
+    { icon: <FaSlack className="h-8 w-8" />, name: "Slack" },
+    { icon: <FaGoogle className="h-8 w-8" />, name: "Google" },
+    { icon: <FaMicrosoft className="h-8 w-8" />, name: "Microsoft" },
+    { icon: <FaCodepen className="h-8 w-8" />, name: "Salesforce" },
+    { icon: <FaJira className="h-8 w-8" />, name: "Jira" },
+    { icon: <FaTasks className="h-8 w-8" />, name: "Zapier" },
+    { icon: <FaVideo className="h-8 w-8" />, name: "Zoom" },
+    { icon: <FaGithub className="h-8 w-8" />, name: "GitHub" },
+    { icon: <FaCreditCard className="h-8 w-8" />, name: "Stripe" },
+    { icon: <FaPhone className="h-8 w-8" />, name: "Twilio" },
+    { icon: <FaDropbox className="h-8 w-8" />, name: "Dropbox" },
+    { icon: <FaShoppingBag className="h-8 w-8" />, name: "Shopify" }
   ];
 
   return (
