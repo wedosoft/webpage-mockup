@@ -19,7 +19,7 @@ const Home = () => {
         description="WeDo Desk는 기업의 고객 지원 및 서비스 관리를 더 스마트하게 만듭니다. 클라우드 기반 고객 서비스 플랫폼으로 응대 시간 단축 및 고객 만족도를 향상시키세요."
         image="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80"
       />
-      <div className="font-sans antialiased bg-white text-secondary">
+      <div className="font-sans antialiased bg-white text-foreground">
         <Header />
         <main>
           <HeroSection />

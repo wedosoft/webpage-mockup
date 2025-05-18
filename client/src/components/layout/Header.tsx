@@ -50,7 +50,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center">
             <div className="text-primary font-bold text-2xl font-heading">
-              <span className="text-secondary">WeDo</span>Desk
+              <span className="text-foreground">WeDo</span>Desk
             </div>
         </Link>
         
@@ -72,7 +72,7 @@ const Header = () => {
         
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-secondary"
+          className="md:hidden text-foreground"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
         >
