@@ -54,16 +54,25 @@ export async function setupVite(app: Express, server: Server) {
         "index.html",
       );
 
+      // index.html 존재 여부 확인
+      if (!fs.existsSync(clientTemplate)) {
+        res.status(404).set({ "Content-Type": "text/html" }).end("index.html 파일을 찾을 수 없습니다. 클라이언트 빌드 상태를 확인해 주세요.");
+        return;
+      }
+
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
       template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`,
+        `src=\"/src/main.tsx\"`,
+        `src=\"/src/main.tsx?v=${nanoid()}\"`,
       );
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
-      vite.ssrFixStacktrace(e as Error);
+      // vite.ssrFixStacktrace가 함수일 때만 호출
+      if (vite && typeof vite.ssrFixStacktrace === "function") {
+        vite.ssrFixStacktrace(e as Error);
+      }
       next(e);
     }
   });

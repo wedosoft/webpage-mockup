@@ -7,6 +7,29 @@ import {
 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+function DarkModeToggle() {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
+
+  return (
+    <button
+      aria-label={dark ? "라이트 모드로 전환" : "다크 모드로 전환"}
+      onClick={() => setDark((d) => !d)}
+      className="ml-4 p-2 rounded-full border border-transparent hover:border-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground"
+      style={{ fontSize: 20 }}
+    >
+      {dark ? "☀️" : "🌙"}
+    </button>
+  );
+}
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -82,6 +105,8 @@ const Header = () => {
             <Menu className="h-6 w-6" />
           )}
         </button>
+
+        <DarkModeToggle />
       </div>
       
       {/* Mobile Menu */}
